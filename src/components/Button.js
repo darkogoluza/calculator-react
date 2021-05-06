@@ -10,6 +10,7 @@ const Button = ({ content, type }) => {
     handleClear,
     handleInvertPolarity,
     handleDecimalPoint,
+    handleAdvancedOperation,
   } = useCalculatorContext();
 
   const handleClick = () => {
@@ -39,6 +40,18 @@ const Button = ({ content, type }) => {
             break;
           case ".":
             handleDecimalPoint();
+            break;
+          case "sin":
+            handleAdvancedOperation(content);
+            break;
+          case "cos":
+            handleAdvancedOperation(content);
+            break;
+          case "tan":
+            handleAdvancedOperation(content);
+            break;
+          case "√":
+            handleAdvancedOperation(content);
             break;
         }
     }

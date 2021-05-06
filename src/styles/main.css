@@ -13,7 +13,7 @@ body {
 
 .calculator {
   height: 550px;
-  width: 400px;
+  width: 450px;
   background-color: #ebf5ff;
   border-radius: 20px;
   position: absolute;
@@ -59,15 +59,7 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   color: #173b5f;
-  font-size: 2.25em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  display: block;
-  line-height: 1em;
-  /* a */
-  max-height: 1em;
-  /* a x number of line to show (ex : 2 line)  */
+  font-size: 2em;
 }
 
 .calculator__buttons {

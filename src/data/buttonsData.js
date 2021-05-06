@@ -1,15 +1,15 @@
 export const buttonsData = [
   {
     content: "sin",
-    type: "operator",
+    type: "function",
   },
   {
     content: "cos",
-    type: "operator",
+    type: "function",
   },
   {
     content: "tan",
-    type: "operator",
+    type: "function",
   },
   {
     content: "del",
@@ -37,7 +37,7 @@ export const buttonsData = [
   },
   {
     content: "√",
-    type: "operator",
+    type: "function",
   },
   {
     content: "4",

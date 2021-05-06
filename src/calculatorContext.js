@@ -8,7 +8,10 @@ export const CalculatorProvider = ({ children }) => {
   const [operator, setOperator] = useState("");
 
   const numberClick = (number) => {
-    if (primary !== "0") setPrimary(primary + number);
+    if (primary !== "0")
+      setPrimary(
+        (primary + number).substring(0, primary.includes("-") ? 19 : 18)
+      );
     else setPrimary(number);
   };
   const operatorClick = (newOperator) => {
@@ -57,7 +60,24 @@ export const CalculatorProvider = ({ children }) => {
   };
   const handleDecimalPoint = () => {
     if (!primary.includes(".")) {
-      setPrimary(primary + ".");
+      setPrimary((primary + ".").substring(0, primary.includes("-") ? 19 : 18));
+    }
+  };
+  const handleAdvancedOperation = (advancedOperation) => {
+    const a = parseFloat(primary);
+    switch (advancedOperation) {
+      case "sin":
+        setPrimary(Math.sin(a).toString());
+        break;
+      case "cos":
+        setPrimary(Math.cos(a).toString());
+        break;
+      case "tan":
+        setPrimary(Math.tan(a).toString());
+        break;
+      case "√":
+        setPrimary(Math.sqrt(a).toString());
+        break;
     }
   };
 
@@ -70,6 +90,9 @@ export const CalculatorProvider = ({ children }) => {
       case "-":
         return (a - b).toString();
       case "÷":
+        if (b === 0) {
+          return "0";
+        }
         return (a / b).toString();
       case "*":
         return (a * b).toString();
@@ -91,6 +114,7 @@ export const CalculatorProvider = ({ children }) => {
         handleClear,
         handleInvertPolarity,
         handleDecimalPoint,
+        handleAdvancedOperation,
       }}
     >
       {children}
