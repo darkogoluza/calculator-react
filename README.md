@@ -12,3 +12,5 @@ This calculator can do simple arithmetic operations such as:
 * Sin
 * Cos
 * Tan
+<br> <br>
+Design was not made by me, credit goes to => https://dribbble.com/shots/6789009-Basic-Calculator
