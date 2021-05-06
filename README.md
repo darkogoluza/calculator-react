@@ -3,12 +3,12 @@
 ---
 # About
 This calculator can do simple arithmetic operations such as:
-* + | Adding 
-* - | Subtracting 
-* * | Multiplying
-* ÷ | Dividing
-* % | Modul
-* √ | Square root
+* Adding      | +  
+* Subtracting | -  
+* Multiplying | *  
+* Dividing    | ÷  
+* Modul       | %  
+* Square root | √  
 * Sin
 * Cos
 * Tan
